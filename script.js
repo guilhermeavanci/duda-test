@@ -50,7 +50,8 @@ const initWidget = (id) => {
             "HCPDudaWidgets - event triggered:",
             eventType,
             "->",
-            action
+            action,
+            module[action]
           );
           if (action && typeof module[action] === "function") {
             module[action]();
