@@ -46,6 +46,12 @@ const initWidget = (id) => {
 
         c.addEventListener(eventType, () => {
           const action = attr.value;
+          console.log(
+            "HCPDudaWidgets - event triggered:",
+            eventType,
+            "->",
+            action
+          );
           if (action && typeof module[action] === "function") {
             module[action]();
           }
